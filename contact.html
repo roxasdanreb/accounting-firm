@@ -49,63 +49,97 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-actions">
-            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-                <span class="toggle-icon">☀️</span>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+                <span class="toggle-icon" aria-hidden="true">☀️</span>
                 <span class="toggle-text">Light</span>
             </button>
         </div>
     </nav>
 
-    <header>
-        <div class="container">
-            <h1>Contact Us</h1>
-        </div>
-    </header>
+    <main class="contact-page">
+        <header class="contact-page-header">
+            <div class="container">
+                <p class="eyebrow">PARAGON SOLUTIONS</p>
+                <h1>Initiate a Confidential Discussion</h1>
+                <p>Share the scope of your accounting needs and our team will respond with a focused next step.</p>
+            </div>
+        </header>
 
-    <main>
-        <div class="container">
-            <section class="contact-section">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p>We'd love to hear from you. Whether you have a question about our services or need immediate assistance, our team is here to help.</p>
-                    
-                    <div class="contact-details">
-                        <div class="detail-item">
-                            <h3>📍 Location</h3>
-                            <p>204, Main Street<br>Business District,<br>City Center</p>
-                        </div>
-                        <div class="detail-item">
-                            <h3>📞 Phone</h3>
-                            <p>(555) 123-4567</p>
-                        </div>
-                        <div class="detail-item">
-                            <h3>✉️ Email</h3>
-                            <p>info@accountmax.com</p>
-                        </div>
-                        <div class="detail-item">
-                            <h3>🕐 Hours</h3>
-                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
-                        </div>
+        <section class="contact-grid container" aria-label="Contact and consultation request">
+            <div class="headquarters-panel">
+                <p class="eyebrow">CORPORATE HEADQUARTERS</p>
+                <h2>Let&apos;s discuss what your business needs next.</h2>
+
+                <div class="contact-fact">
+                    <span class="contact-fact-icon" aria-hidden="true">&#128205;</span>
+                    <div>
+                        <h3>Office Address</h3>
+                        <p>Tawog, Talo-ot, Argao,<br>Cebu, Philippines</p>
                     </div>
-                    
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
                 </div>
-            </section>
-        </div>
+
+                <div class="contact-fact">
+                    <span class="contact-fact-icon" aria-hidden="true">&#128222;</span>
+                    <div>
+                        <h3>Direct Telephone</h3>
+                        <p><a href="tel:+639424107158">(+63) 942 410 7158</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-fact">
+                    <span class="contact-fact-icon" aria-hidden="true">&#128172;</span>
+                    <div>
+                        <h3>Direct Executive Channel</h3>
+                        <a class="whatsapp-link" href="https://wa.me/639424107158?text=Hello%20Paragon%20Solutions%2C%20I%27d%20like%20to%20initiate%20a%20confidential%20discussion." target="_blank" rel="noopener">Initiate WhatsApp Conversation <span aria-hidden="true">&#8594;</span></a>
+                    </div>
+                </div>
+
+                <div class="contact-fact">
+                    <span class="contact-fact-icon" aria-hidden="true">&#128336;</span>
+                    <div>
+                        <h3>Operating Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="consultation-panel">
+                <p class="eyebrow">CONSULTATION REQUEST FORM</p>
+                <h2>Tell us about your engagement.</h2>
+                <form class="contact-form consultation-form">
+                    <div class="form-field">
+                        <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                        <input id="full-name" name="full-name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="business-name">Corporate Entity / Business Name</label>
+                        <input id="business-name" name="business-name" type="text" autocomplete="organization">
+                    </div>
+                    <div class="form-field">
+                        <label for="corporate-email">Corporate Email Address <span aria-hidden="true">*</span></label>
+                        <input id="corporate-email" name="corporate-email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="direct-phone">Direct Phone Number</label>
+                        <input id="direct-phone" name="direct-phone" type="tel" autocomplete="tel">
+                    </div>
+
+                    <fieldset class="interest-fieldset">
+                        <legend>Primary Area of Interest</legend>
+                        <label><input type="radio" name="interest" value="full-cycle-bookkeeping" required> Full-Cycle Bookkeeping Management</label>
+                        <label><input type="radio" name="interest" value="financial-statements"> Financial Statements &amp; Performance</label>
+                        <label><input type="radio" name="interest" value="strategic-advisory"> Strategic Business Advisory</label>
+                        <label><input type="radio" name="interest" value="accounting-systems"> Accounting Systems Setup</label>
+                    </fieldset>
+
+                    <div class="form-field">
+                        <label for="engagement-summary">Engagement Summary / Operational Scope</label>
+                        <textarea id="engagement-summary" name="engagement-summary" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Formal Inquiry <span aria-hidden="true">&#8594;</span></button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
