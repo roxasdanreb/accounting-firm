@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - P & C Accounting Firm</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for the services section - assuming style.css might need adjustments */
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .services-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .services-header p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .services-matrix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+        .service-item {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .service-item .icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #007bff; /* Example icon color */
+        }
+        .service-item h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .service-item p {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.6;
+            flex-grow: 1; /* Allows description to take available space */
+            margin-bottom: 20px;
+        }
+        .service-item a {
+            display: inline-block;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto; /* Pushes the link to the bottom */
+        }
+        .service-item a:hover {
+            text-decoration: underline;
+        }
+        .custom-scope {
+            background-color: #e9ecef;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 50px auto 30px auto;
+        }
+        .custom-scope p {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .custom-scope a {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .custom-scope a:hover {
+            background-color: #0056b3;
+        }
+
+        body[data-theme="dark"] .services-header h1 {
+            color: var(--ink);
+        }
+
+        body[data-theme="dark"] .services-header p,
+        body[data-theme="dark"] .service-item p,
+        body[data-theme="dark"] .custom-scope p {
+            color: var(--ink-soft);
+        }
+
+        body[data-theme="dark"] .service-item h3,
+        body[data-theme="dark"] .custom-scope a,
+        body[data-theme="dark"] header h1 {
+            color: var(--ink);
+        }
+
+        body[data-theme="dark"] .service-item .icon {
+            color: var(--blue);
+        }
+
+        body[data-theme="dark"] .service-item a {
+            color: var(--blue);
+        }
+
+        body[data-theme="dark"] .service-item {
+            background: rgba(16, 42, 53, 0.92);
+            border-color: rgba(191, 208, 213, 0.2);
+            box-shadow: 0 10px 20px rgba(2, 13, 18, 0.35);
+        }
+
+        body[data-theme="dark"] .custom-scope {
+            background: rgba(16, 42, 53, 0.9);
+            border: 1px solid rgba(191, 208, 213, 0.2);
+        }
+
+        body[data-theme="dark"] .custom-scope a {
+            color: #ffffff;
+        }
+
+        body[data-theme="dark"] header {
+            background: #071b24;
+            color: var(--ink);
+        }
+
+        body[data-theme="dark"] main {
+            background: #071b24;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-matrix {
+                grid-template-columns: 1fr;
+            }
+            .services-header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-wrap">
+            <div class="nav-logo" aria-label="P and C accounting firm logo">
+                <svg viewBox="0 0 520 360" role="img" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="curveRed" x1="0%" x2="100%" y1="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffbf47"/>
+                            <stop offset="35%" stop-color="#ff7a59"/>
+                            <stop offset="100%" stop-color="#ff4d67"/>
+                        </linearGradient>
+                        <linearGradient id="curveBlue" x1="0%" x2="100%" y1="0%" y2="100%">
+                            <stop offset="0%" stop-color="#3db4e8"/>
+                            <stop offset="100%" stop-color="#1f5cc8"/>
+                        </linearGradient>
+                        <linearGradient id="barGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffd76e"/>
+                            <stop offset="100%" stop-color="#f7a93d"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M108 255C162 219 195 192 228 162C275 117 320 104 377 111C392 113 411 117 429 123L468 67C446 58 421 52 393 50C332 46 261 67 208 113C169 146 140 177 108 255Z" fill="url(#curveRed)" opacity="0.9"/>
+                    <path d="M70 208C155 240 230 252 314 225C364 209 401 182 449 132L490 164C447 227 397 261 326 287C235 320 136 307 70 208Z" fill="url(#curveBlue)" opacity="0.92"/>
+                    <g transform="translate(200 40)">
+                        <rect x="0" y="138" width="36" height="110" rx="6" fill="url(#barGrad)"/>
+                        <rect x="48" y="112" width="36" height="136" rx="6" fill="url(#barGrad)" opacity="0.9"/>
+                        <rect x="96" y="88" width="36" height="160" rx="6" fill="url(#barGrad)" opacity="0.8"/>
+                        <rect x="144" y="66" width="36" height="182" rx="6" fill="url(#barGrad)" opacity="0.7"/>
+                        <rect x="192" y="40" width="36" height="208" rx="6" fill="url(#barGrad)" opacity="0.6"/>
+                    </g>
+                    <path d="M273 205L352 134L451 133L397 185L273 205Z" fill="#f3fbff" opacity="0.92"/>
+                    <path d="M379 132L431 134L347 199L364 181L379 132Z" fill="#f3fbff" opacity="0.9"/>
+                    <path d="M379 132L440 133L447 176L438 184L379 132Z" fill="#f3fbff" opacity="0.9"/>
+                </svg>
+            </div>
+            <div class="logo">P &amp; C Accounting Firm</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-text">Light</span>
+            </button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Our Services</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="services-header">
+                <h1>Practice Areas & Specialized Solutions</h1>
+                <p>Systematic financial oversight designed for sustainable performance.</p>
+            </section>
+
+            <div class="services-matrix">
+                <div class="service-item">
+                    <div class="icon"> bookkeeping </div>
+                    <h3>Bookkeeping & General Accounting</h3>
+                    <p>Continuous ledger oversight, expense classification, and comprehensive reconciliations of accounts.</p>
+                    <a href="#">[View Engagement Scope]</a>
+                </div>
+                <div class="service-item">
+                    <div class="icon"> reporting </div>
+                    <h3>Financial Reporting Suites</h3>
+                    <p>Preparation of unaudited Statements of Financial Position, Comprehensive Income, and Cash Flow summaries.</p>
+                    <a href="#">[View Engagement Scope]</a>
+                </div>
+                <div class="service-item">
+                    <div class="icon"> advisory </div>
+                    <h3>Executive Advisory & Consulting</h3>
+                    <p>Routine strategic consultations to strengthen financial controls and support senior decision-makers.</p>
+                    <a href="#">[View Engagement Scope]</a>
+                </div>
+                <div class="service-item">
+                    <div class="icon"> audit </div>
+                    <h3>Audit Readiness & Assurance</h3>
+                    <p>Independent ledger reviews, adjusting entries, and documentation reconciliation for stakeholders and lenders.</p>
+                    <a href="#">[View Engagement Scope]</a>
+                </div>
+                <div class="service-item">
+                    <div class="icon"> cashflow </div>
+                    <h3>Cash Flow & Budget Planning</h3>
+                    <p>Diagnostic liquidity management, runway assessments, and financial modeling to support expansion.</p>
+                    <a href="#">[View Engagement Scope]</a>
+                </div>
+                <div class="service-item">
+                    <div class="icon"> systems </div>
+                    <h3>Systems & Workflow Setup</h3>
+                    <p>Tailored chart of accounts design, cloud ledger transition, and internal process optimization.</p>
+                    <a href="#">[View Engagement Scope]</a>
+                </div>
+            </div>
+
+            <section class="custom-scope">
+                <p>"Every business requires a distinct framework. Engagements are structured around your transaction volume, operational complexity, and reporting needs."</p>
+                <a href="#">[Request a Tailored Scope of Work]</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span data-year>2026</span> P&amp;C Accounting Firm. All rights reserved.</p>
+            <p>Let us handle your finances so you can focus on your business</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
