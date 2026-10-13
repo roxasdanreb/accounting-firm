@@ -61,7 +61,6 @@ Status: 75% complete
 - [ ] Add case studies, sample work, or service deliverables.
 - [ ] Add a short FAQ section.
 - [ ] Show that the business is qualified and officially registered.
-- [ ] Share work experience and the number of clients served.
 - [ ] Add real client reviews.
 - [ ] Explain how client information is protected.
 - [ ] Mention business insurance, if available.
