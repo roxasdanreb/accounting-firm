@@ -593,20 +593,22 @@ body[data-theme="dark"] .btn-secondary {
 }
 
 .hero-image {
-    background: var(--navy);
+    background: transparent;
+    border: 4px solid #111111;
     border-radius: 1.2rem;
-    box-shadow: var(--shadow);
-    min-height: 360px;
+    box-shadow: 0 18px 42px rgba(15, 45, 57, 0.14);
+    display: block;
+    margin: 0 auto;
+    max-width: 700px;
+    min-height: 440px;
     overflow: hidden;
     padding: 0;
     position: relative;
-}
-
-.hero-image {
-    display: block;
+    width: 100%;
 }
 
 .hero-image img {
+    display: block;
     height: 100%;
     inset: 0;
     object-fit: cover;
@@ -1057,12 +1059,14 @@ body[data-theme="dark"] .btn-secondary {
 
 .about-feature-image {
     aspect-ratio: 4 / 3;
-    background: #91afe0;
-    border: 3px solid #111;
-    border-radius: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 1.25rem;
+    box-shadow: 0 18px 42px rgba(15, 45, 57, 0.12);
+    display: block;
     height: auto;
     margin: 0;
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
 }
 
@@ -1677,7 +1681,8 @@ footer p {
     }
 
     .about-feature-image {
-        height: 220px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 

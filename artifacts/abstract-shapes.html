@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abstract Shapes - SVG Artifact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+  <header class="border-b border-slate-800 bg-slate-900/80 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold text-sm border border-emerald-500/30">
+        🎨
+      </span>
+      <div>
+        <h1 class="text-sm font-semibold text-white">Abstract Shapes</h1>
+        <p class="text-xs text-slate-400">SVG Graphic Artifact</p>
+      </div>
+    </div>
+  </header>
+  <main class="flex-1 p-8 flex items-center justify-center overflow-auto">
+    <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 shadow-2xl flex items-center justify-center">
+      <svg width="720" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#2E3A4A"/>
+  <g transform="translate(360, 250)">
+    <g transform="translate(-100, -120)">
+      <rect width="100" height="100" fill="#2E3A4A"/>
+      <rect x="10" y="10" width="80" height="80" fill="#2E3A4A"/>
+      <rect x="20" y="20" width="60" height="60" fill="#2E3A4A"/>
+      <rect x="30" y="30" width="40" height="40" fill="#2E3A4A"/>
+      <rect x="40" y="40" width="20" height="20" fill="#2E3A4A"/>
+    </g>
+    <g transform="translate(50, -120)">
+      <circle r="50" fill="#2E3A4A"/>
+      <circle r="40" fill="#2E3A4A"/>
+      <circle r="30" fill="#2E3A4A"/>
+      <circle r="20" fill="#2E3A4A"/>
+      <circle r="10" fill="#2E3A4A"/>
+    </g>
+    <g transform="translate(-100, 50)">
+      <path d="M -50 0 L -25 43.3 L 0 0 L -25 -43.3 Z" fill="#2E3A4A"/>
+      <path d="M -50 0 L -25 43.3 L 0 0 L -25 -43.3 Z" transform="translate(25, 0) scale(0.8)" fill="#2E3A4A"/>
+      <path d="M -50 0 L -25 43.3 L 0 0 L -25 -43.3 Z" transform="translate(50, 0) scale(0.6)" fill="#2E3A4A"/>
+    </g>
+    <g transform="translate(50, 50)">
+      <path d="M 0 -50 L 43.3 25 L -43.3 25 Z" fill="#2E3A4A"/>
+      <path d="M 0 -50 L 43.3 25 L -43.3 25 Z" transform="translate(0, 25) scale(0.8)" fill="#2E3A4A"/>
+      <path d="M 0 -50 L 43.3 25 L -43.3 25 Z" transform="translate(0, 50) scale(0.6)" fill="#2E3A4A"/>
+    </g>
+  </g>
+</svg>
+    </div>
+  </main>
+</body>
+</html>
