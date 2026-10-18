@@ -222,6 +222,18 @@ nav {
     min-width: 0;
 }
 
+.site-nav .logo-wrap {
+    background: transparent;
+    border-radius: 0;
+    flex: 0 0 auto;
+    padding: 0;
+}
+
+.site-nav .logo-wrap:hover {
+    background: transparent;
+    color: #fff;
+}
+
 .nav-logo {
     display: block;
     flex: 0 0 46px;
