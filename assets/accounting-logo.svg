@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="48 42 345 360">
+  <defs>
+    <linearGradient id="growth" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffca05"/>
+      <stop offset="1" stop-color="#f32d62"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#16b6d5"/>
+      <stop offset="1" stop-color="#1764bf"/>
+    </linearGradient>
+  </defs>
+  <path d="M101 104c-19 30-28 61-25 92 3 30 19 53 48 69l27-18c-25-13-41-32-46-57-6-29-7-57-4-86Z" fill="url(#growth)"/>
+  <path d="M150 115h37v125h-37zM200 83h38v156h-38zM250 52h39v182h-39z" fill="url(#growth)"/>
+  <path d="M58 232c43 26 88 40 132 39 57-1 98-31 126-91-15 55-45 93-89 112-47 21-105 14-169-18Z" fill="url(#growth)"/>
+  <path d="m311 52 56 40-33 15c37 56 47 117 29 171-20 61-72 103-137 113-48 8-92-4-126-31 46 13 91 9 130-9 47-22 80-58 91-104 9-37 3-77-16-110l-28 11Z" fill="url(#sweep)"/>
+</svg>

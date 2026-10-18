@@ -223,14 +223,11 @@ nav {
 }
 
 .nav-logo {
-    flex: 0 0 45px;
-    height: 34px;
-    width: 45px;
-}
-
-.nav-logo svg {
-    height: 100%;
-    width: 100%;
+    display: block;
+    flex: 0 0 46px;
+    height: 46px;
+    object-fit: contain;
+    width: 46px;
 }
 
 nav .logo {
@@ -1613,17 +1610,30 @@ footer p {
     }
 
     nav {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0.35rem;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
         padding-bottom: 0.7rem;
         padding-top: 0.7rem;
     }
 
+    nav .logo-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
     nav .nav-links {
-        gap: 0;
-        justify-content: space-between;
+        order: 3;
         width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    nav .nav-actions {
+        order: 2;
     }
 
     nav a {
