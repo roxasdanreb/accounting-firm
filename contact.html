@@ -1,131 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - P & C Accounting Firm</title>
-        <link rel="icon" type="image/svg+xml" href="assets/accounting-logo.svg">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <div class="logo-wrap">
-            <img class="nav-logo" src="assets/accounting-logo.svg" alt="P and C accounting firm logo">
-            <div class="logo">P &amp; C Accounting Firm</div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
-                <span class="toggle-icon" aria-hidden="true">☀️</span>
-                <span class="toggle-text">Light</span>
-            </button>
-        </div>
-    </nav>
-
-    <main class="contact-page">
-        <header class="contact-page-header">
-            <div class="container">
-                <h1>Initiate a Confidential Discussion</h1>
-                <p>Share the scope of your accounting needs and our team will respond with a focused next step.</p>
-            </div>
-        </header>
-
-        <section class="contact-grid container" aria-label="Contact and consultation request">
-            <div class="headquarters-panel">
-                <p class="eyebrow">CORPORATE HEADQUARTERS</p>
-                <h2>Let&apos;s discuss what your business needs next.</h2>
-
-                <div class="contact-fact">
-                    <span class="contact-fact-icon" aria-hidden="true">&#128205;</span>
-                    <div>
-                        <h3>Office Address</h3>
-                        <p>Tawog, Talo-ot, Argao,<br>Cebu, Philippines</p>
-                    </div>
-                </div>
-
-                <div class="contact-fact">
-                    <span class="contact-fact-icon" aria-hidden="true">&#128222;</span>
-                    <div>
-                        <h3>Direct Telephone</h3>
-                        <p><a href="tel:+639424107158">(+63) 942 410 7158</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-fact">
-                    <span class="contact-fact-icon" aria-hidden="true">&#9993;</span>
-                    <div>
-                        <h3>Business Email</h3>
-                        <p><a href="mailto:pandcservice181@gmail.com">pandcservice181@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-fact">
-                    <span class="contact-fact-icon" aria-hidden="true">&#128172;</span>
-                    <div>
-                        <h3>Direct Executive Channel</h3>
-                        <a class="whatsapp-link" href="https://wa.me/639424107158?text=Hello%20there%2C%20I%27d%20like%20to%20initiate%20a%20confidential%20discussion." target="_blank" rel="noopener">Initiate WhatsApp Conversation <span aria-hidden="true">&#8594;</span></a>
-                    </div>
-                </div>
-
-                <div class="contact-fact">
-                    <span class="contact-fact-icon" aria-hidden="true">&#128336;</span>
-                    <div>
-                        <h3>Operating Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="consultation-panel">
-                <p class="eyebrow">CONSULTATION REQUEST FORM</p>
-                <h2>Tell us about your engagement.</h2>
-                <form class="contact-form consultation-form">
-                    <div class="form-field">
-                        <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
-                        <input id="full-name" name="full-name" type="text" autocomplete="name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="business-name">Corporate Entity / Business Name</label>
-                        <input id="business-name" name="business-name" type="text" autocomplete="organization">
-                    </div>
-                    <div class="form-field">
-                        <label for="corporate-email">Corporate Email Address <span aria-hidden="true">*</span></label>
-                        <input id="corporate-email" name="corporate-email" type="email" autocomplete="email" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="direct-phone">Direct Phone Number</label>
-                        <input id="direct-phone" name="direct-phone" type="tel" autocomplete="tel">
-                    </div>
-
-                    <fieldset class="interest-fieldset">
-                        <legend>Primary Area of Interest</legend>
-                        <label><input type="radio" name="interest" value="full-cycle-bookkeeping" required> Full-Cycle Bookkeeping Management</label>
-                        <label><input type="radio" name="interest" value="financial-statements"> Financial Statements &amp; Performance</label>
-                        <label><input type="radio" name="interest" value="strategic-advisory"> Strategic Business Advisory</label>
-                        <label><input type="radio" name="interest" value="accounting-systems"> Accounting Systems Setup</label>
-                    </fieldset>
-
-                    <div class="form-field">
-                        <label for="engagement-summary">Engagement Summary / Operational Scope</label>
-                        <textarea id="engagement-summary" name="engagement-summary" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Submit Formal Inquiry <span aria-hidden="true">&#8594;</span></button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span data-year>2026</span> P&amp;C Accounting Firm. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c2632" />
+    <title>Contact - P &amp; C Accounting Firm</title>
+    <link rel="icon" type="image/svg+xml" href="assets/accounting-logo.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
