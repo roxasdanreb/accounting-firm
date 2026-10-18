@@ -1,3 +1,4 @@
+const globalStyles = String.raw`
 :root {
     --bg: #f6f4ef;
     --bg-alt: #eef3f5;
@@ -1986,4 +1987,10 @@ body[data-theme="dark"] .form-status {
         opacity: 1;
         transform: none;
     }
+}
+
+`
+
+export default function GlobalStyles() {
+  return <style>{globalStyles}</style>
 }
