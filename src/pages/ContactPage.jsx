@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const emailAddress = 'pandcservice181@gmail.com'
+const emailAddress = 'danroxas404@gmail.com'
 
 function ContactPage() {
   const [formState, setFormState] = useState({ status: 'idle', message: '' })
@@ -8,8 +8,18 @@ function ContactPage() {
   async function handleInquirySubmit(event) {
     event.preventDefault()
     const form = event.currentTarget
-    const payload = Object.fromEntries(new FormData(form).entries())
-    payload._subject = 'New inquiry for P&C Accounting Firm'
+    const formData = Object.fromEntries(new FormData(form).entries())
+    const payload = Object.fromEntries([
+      ['Full Name', formData.name],
+      ['Corporate Entity / Business Name', formData.business],
+      ['Corporate Email Address', formData.email],
+      ['Direct Phone Number', formData.phone],
+      ['Primary Area of Interest', formData.interest],
+      ['Engagement Summary / Operational Scope', formData.message],
+    ].filter(([, value]) => value))
+    payload._subject = 'New Consultation Request | P&C Accounting Firm'
+    payload._replyto = formData.email
+    payload._template = 'table'
     const controller = new AbortController()
     const timeoutId = window.setTimeout(() => controller.abort(), 15000)
     setFormState({ status: 'sending', message: 'Sending your inquiry…' })
@@ -24,10 +34,11 @@ function ContactPage() {
         body: JSON.stringify(payload),
         signal: controller.signal,
       })
-      const result = await response.json()
+      const result = await response.json().catch(() => null)
 
-      if (!response.ok || String(result.success).toLowerCase() !== 'true') {
-        throw new Error('Email service did not accept the inquiry.')
+      if (!response.ok || String(result?.success).toLowerCase() !== 'true') {
+        const serviceMessage = typeof result?.message === 'string' ? result.message.trim() : ''
+        throw new Error(serviceMessage || `FormSubmit returned an unexpected response (HTTP ${response.status}).`)
       }
 
       form.reset()
@@ -35,7 +46,9 @@ function ContactPage() {
     } catch (error) {
       const message = error.name === 'AbortError'
         ? 'Sending took too long. Please try again or email the firm directly.'
-        : `We could not send your inquiry. Please email ${emailAddress} directly.`
+        : error instanceof TypeError
+          ? `Could not connect to FormSubmit. Check your internet connection and try again, or email ${emailAddress} directly.`
+          : `FormSubmit could not accept your inquiry: ${error.message} If this is your first submission, check ${emailAddress} for an activation email.`
       setFormState({ status: 'error', message })
     } finally {
       window.clearTimeout(timeoutId)
