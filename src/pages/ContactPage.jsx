@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const emailAddress = 'danroxas404@gmail.com'
+const emailAddress = 'pandcservice181@gmail.com'
 
 function ContactPage() {
   const [formState, setFormState] = useState({ status: 'idle', message: '' })
