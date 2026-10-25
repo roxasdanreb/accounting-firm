@@ -457,6 +457,7 @@ body[data-theme="dark"] .about-editorial-copy h2,
 body[data-theme="dark"] .meta-value,
 body[data-theme="dark"] .service-item-compact h3,
 body[data-theme="dark"] .scope-banner h3,
+body[data-theme="dark"] .value-card h3,
 body[data-theme="dark"] .about-title {
     color: var(--ink);
 }
