@@ -41,8 +41,8 @@ function HomePage() {
           <h1>Reliable Accounting and Tax Support for Your Business</h1>
           <p className="hero-lead">Professional bookkeeping, compliance, financial reporting, and advisory services from P&amp;C Accounting Firm.</p>
           <div className="buttons">
-            <a className="btn-primary" href="#/services">Explore Solutions</a>
-            <a className="btn-secondary" href="#/contact">Book a Discovery Call</a>
+            <a className="btn-primary" href="/services">Explore Solutions</a>
+            <a className="btn-secondary" href="/contact">Book a Discovery Call</a>
           </div>
         </div>
         <div className="hero-image" data-reveal>

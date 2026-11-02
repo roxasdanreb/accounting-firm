@@ -1,16 +1,16 @@
 import accountingLogo from '../../assets/accounting-logo.svg'
 
 const navigation = [
-  { label: 'Home', href: '#/', page: 'home' },
-  { label: 'About Us', href: '#/about', page: 'about' },
-  { label: 'Services', href: '#/services', page: 'services' },
-  { label: 'Contact', href: '#/contact', page: 'contact' },
+  { label: 'Home', href: '/', page: 'home' },
+  { label: 'About Us', href: '/about', page: 'about' },
+  { label: 'Services', href: '/services', page: 'services' },
+  { label: 'Contact', href: '/contact', page: 'contact' },
 ]
 
 export function SiteNavigation({ activePage, theme, onToggleTheme }) {
   return (
     <nav className="site-nav">
-      <a className="logo-wrap" href="#/" aria-label="P and C Accounting Firm home">
+      <a className="logo-wrap" href="/" aria-label="P and C Accounting Firm home">
         <img className="nav-logo" src={accountingLogo} alt="" />
         <span className="logo">P &amp; C Accounting Firm</span>
       </a>
